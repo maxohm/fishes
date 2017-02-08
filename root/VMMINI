@@ -1,0 +1,73 @@
+#
+# $FreeBSD: stable/10/sys/amd64/conf/GENERIC 302041 2016-06-21 04:51:55Z sephe $
+
+#makeoptions	DEBUG=-g		# Build kernel with gdb(1) debug symbols
+#makeoptions	WITH_CTF=1		# Run ctfconvert(1) for DTrace support
+
+options 	SCHED_ULE		# ULE scheduler
+options 	PREEMPTION		# Enable kernel thread preemption
+options 	INET			# InterNETworking
+#options 	INET6			# IPv6 communications protocols
+options 	TCP_OFFLOAD		# TCP offload
+options 	NFSCL			# New Network Filesystem Client
+options 	MSDOSFS			# MSDOS Filesystem
+options 	CD9660			# ISO 9660 Filesystem
+options 	GEOM_PART_GPT		# GUID Partition Tables.
+options 	SYSVSHM			# SYSV-style shared memory
+options 	SYSVMSG			# SYSV-style message queues
+options 	SYSVSEM			# SYSV-style semaphores
+options 	_KPOSIX_PRIORITY_SCHEDULING # POSIX P1003_1B real-time extensions
+options 	PRINTF_BUFR_SIZE=128	# Prevent printf output being interspersed.
+options 	KBD_INSTALL_CDEV	# install a CDEV entry in /dev
+
+# Make an SMP-capable kernel by default
+options 	SMP			# Symmetric MultiProcessor Kernel
+
+# CPU frequency control
+#device		cpufreq
+
+# Bus support.
+device		acpi
+options 	ACPI_DMAR
+device		pci
+
+# ATA/SCSI peripherals
+device		scbus			# SCSI bus (required for ATA/SCSI)
+device		da			# Direct Access (disks)
+device		pass			# Passthrough device (direct ATA/SCSI access)
+device		ses			# Enclosure Services (SES and SAF-TE)
+
+# atkbdc0 controls both the keyboard and the PS/2 mouse
+device		atkbdc			# AT keyboard controller
+device		atkbd			# AT keyboard
+device		psm			# PS/2 mouse
+
+device		kbdmux			# keyboard multiplexer
+
+device		vga			# VGA video card driver
+
+device		splash			# Splash screen and screen saver support
+
+# vt is the new video console driver
+device		vt
+device		vt_vga
+device		vt_efifb
+
+# Pseudo devices.
+device		loop			# Network loopback
+device		random			# Entropy device
+#device		padlock_rng		# VIA Padlock RNG
+#device		rdrand_rng		# Intel Bull Mountain RNG
+device		ether			# Ethernet support
+#device		vlan			# 802.1Q VLAN support
+#device		tun			# Packet tunnel.
+device		md			# Memory "disks"
+#device		gif			# IPv6 and IPv4 tunneling
+#device		faith			# IPv6-to-IPv4 relaying (translation)
+#device		firmware		# firmware assist module
+
+# The `bpf' device enables the Berkeley Packet Filter.
+# Be aware of the administrative consequences of enabling this!
+# Note that 'bpf' is required for DHCP.
+#device		bpf			# Berkeley packet filter
+
