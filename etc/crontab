@@ -1,0 +1,52 @@
+# /etc/crontab - root's crontab for FreeBSD
+#
+# $FreeBSD: stable/11/etc/crontab 194170 2009-06-14 06:37:19Z brian $
+#
+SHELL=/bin/sh
+PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin
+#
+#minute	hour	mday	month	wday	who	command
+#
+*/5	*	*	*	*	root	/usr/libexec/atrun
+#
+# Save some entropy so that /dev/random can re-seed on boot.
+*/11	*	*	*	*	operator /usr/libexec/save-entropy
+#
+# Rotate log files every hour, if necessary.
+0	*	*	*	*	root	newsyslog
+#
+# Perform daily/weekly/monthly maintenance.
+1	3	*	*	*	root	periodic daily
+15	4	*	*	6	root	periodic weekly
+30	5	1	*	*	root	periodic monthly
+#
+# Adjust the time zone if the CMOS clock keeps local time, as opposed to
+# UTC time.  See adjkerntz(8) for details.
+1,31	0-5	*	*	*	root	adjkerntz -a
+#=======HOURLY=========================================
+00      *       *       *       *       root    /usr/sbin/service transmission stop
+02      *       *       *       *       root    /etc/pf/pf.snr.sh ue0
+03      *       *       *       *       root    /usr/local/sbin/logrotate -s/var/log/logrotate.stat /usr/local/etc/logrotate.conf
+04      *       *       *       *       root    /usr/bin/uname -a > /etc/motd && /usr/bin/uptime >> /etc/motd
+05      *       *       *       *       root    /root/ssmtp.sh /etc motd ershov_mn@inbox.ru
+06      *       *       *       *       root    /usr/sbin/service transmission start
+#=======DAILY==========================================
+06      11      *       *       *       root    /bin/mkdir -vp /archive/$HOST
+07      11      *       *       *       root    /bin/mv -f /*.tar.* /archive/$HOST/
+08      11      *       *       *       root    /bin/mv -f /usr/*.tar.* /archive/
+09      11      *       *       *       root    /bin/mv -f /usr/local/etc.tar.x /archive/$HOST/uetc.tar.x
+10      11      *       *       *       root    /usr/sbin/service arpwatch stop
+11      11      *       *       *       root    /usr/sbin/service arpwatch start
+12      11      *       *       *       root    /usr/local/bin/dropbox_uploader.sh -f /root/.dropbox_uploader upload /archive/$HOST /
+12      11      *       *       *       root    /usr/local/bin/dropbox_uploader.sh -f /root/.dropbox_uploader upload /archive/*.tar.* /
+13      12      *       *       *       root    /usr/sbin/pkg audit -Fr > /var/log/pkgaudit.log
+14      12      *       *       *       root    /usr/local/sbin/portmaster -L > /var/log/portmaster.log
+#=======WEEKLY=========================================
+15      10      *       *       1       root    /root/txzip.sh /etc
+16      11      *       *       2       root    /root/txzip.sh /root
+17      12      *       *       3       root    /root/txzip.sh /usr/src
+18      13      *       *       4       root    /root/txzip.sh /usr/ports
+19      12      *       *       3       root    /root/txzip.sh /usr/local/etc
+20      11      *       *       2       root    /root/txzip.sh /var
+21      10      *       *       1       root    /root/txzip.sh /home
+#======================================================
