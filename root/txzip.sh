@@ -5,5 +5,5 @@ XZ=`which xz`
 SSL=`which openssl`
 PASS=`/usr/bin/uname -n`
 #
-$TAR -cf - --exclude '*.txz' --exclude '*.tar.*' $1 | $XZ -zc9e | $SSL enc -aes-256-gcm -k $PASS -e > $1.tar.x
+$TAR -cf - --exclude '*.txz' --exclude '*.tar.*' $1 | $XZ -zc9e | $SSL enc -aes-256-cbc -k $PASS -e > $1.tar.x
 #
