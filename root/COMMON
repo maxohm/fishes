@@ -16,4 +16,3 @@ options		NETSMB		#SMB/CIFS requester
 options		SMBFS		#SMB/CIFS filesystem
 #
 options		FUSE
-

@@ -1,7 +1,7 @@
 #
 #
-cpu             HAMMER
-ident           bluefish
+cpu		HAMMER
+ident		bluefish
 maxusers	128
 options		VT_MAXWINDOWS=4
 #
@@ -31,24 +31,24 @@ options		ALTQ_RIO	# RED In/Out
 makeoptions	MODULES_OVERRIDE="opensolaris zfs acl_nfs4 usb/urndis"
 #
 # USB support
-options         USB_DEBUG               # enable debug msgs
-device          uhci                    # UHCI PCI->USB interface
-#device          ohci                    # OHCI PCI->USB interface
-device          ehci                    # EHCI PCI->USB interface (USB 2.0)
-#device          xhci                    # XHCI PCI->USB interface (USB 3.0)
-device          usb                     # USB Bus (required)
-#device          ukbd                    # Keyboard
-device          umass                   # Disks/Mass storage - Requires scbus and da
-device          uhid
-#device         uled
-#device         ums
-device          uether
-device          urndis
+options		USB_DEBUG               # enable debug msgs
+device		uhci                    # UHCI PCI->USB interface
+#device		ohci                    # OHCI PCI->USB interface
+device		ehci                    # EHCI PCI->USB interface (USB 2.0)
+#device		xhci                    # XHCI PCI->USB interface (USB 3.0)
+device		usb                     # USB Bus (required)
+#device		ukbd                    # Keyboard
+device		umass                   # Disks/Mass storage - Requires scbus and da
+device		uhid
+#device		uled
+#device		ums
+device		uether
+device		urndis
 #
-include  	vmmini
-include 	common
+include		vmmini
+include		common
 #
-options 	INET6			# IPv6 communications protocols
+options		INET6			# IPv6 communications protocols
 device		tun
 device		gif			# IPv6 and IPv4 tunneling
 device		faith			# IPv6-to-IPv4 relaying (translation)
