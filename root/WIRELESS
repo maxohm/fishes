@@ -1,0 +1,46 @@
+# PCI IEEE 802.11 Wireless NICs
+device		ath		# Atheros pci/cardbus NIC's
+device		ath_hal		# pci/cardbus chip support
+device		ath_pci		# Atheros pci/cardbus glue
+#device		ath_ar5210	# AR5210 chips
+#device		ath_ar5211	# AR5211 chips
+#device		ath_ar5212	# AR5212 chips
+#device		ath_rf2413
+#device		ath_rf2417
+#device		ath_rf2425
+#device		ath_rf5111
+#device		ath_rf5112
+#device		ath_rf5413
+#device		ath_ar5416		# AR5416 chips
+#
+#options		AH_SUPPORT_AR5416	# enable AR5416 tx/rx descriptors
+#options		AH_RXCFG_SDMAMW_4BYTES
+#
+#device		ath_ar9160	# AR9160 chips
+#device		ath_ar9280	# AR9280 chips
+device		ath_ar9285	# AR9285 chips
+device		ath_rate_sample	# SampleRate tx rate control for ath
+#
+#device		bwi		# Broadcom BCM430* BCM431*
+#device		bwn		# Broadcom BCM43xx
+#device		malo		# Marvell Libertas wireless NICs.
+#device		mwl		# Marvell 88W8363 802.11n wireless NICs.
+#device		mwlfw
+#device		ral		# Ralink Technology RT2500 wireless NICs.
+#
+device          wlan
+#options         IEEE80211_DEBUG         #enable debugging msgs
+#options         IEEE80211_AMPDU_AGE     #age frames in AMPDU reorder q's
+#options         IEEE80211_SUPPORT_MESH  #enable 802.11s D3.0 support
+#options         IEEE80211_SUPPORT_TDMA  #enable TDMA support
+#
+device          wlan_wep
+device          wlan_ccmp
+device          wlan_tkip
+device          wlan_xauth
+#device          wlan_acl
+#device          wlan_amrr
+#
+#options		AH_AR5416_INTERRUPT_MITIGATION	# AR5416 interrupt mitigation
+#options		ATH_ENABLE_11N		# Enable 802.11n support for AR5416 and later
+#

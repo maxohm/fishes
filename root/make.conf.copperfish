@@ -1,0 +1,23 @@
+# $FreeBSD: release/9.1.0/share/examples/etc/make.conf 223148 2011-06-16 12:28:37Z ru $
+#
+CPUTYPE?=k8-sse3
+CFLAGS= -march=k8 -msse3 -O2 -pipe
+#-fno-strict-aliasing
+#CFLAGS= -march=k8 -O2 -pipe -fomit-frame-pointer 
+MAKE_SHELL?=sh
+COPTFLAGS= -O2 -pipe
+
+FORCE_PKG_REGISTER=
+WRKDIRPREFIX=/usr/obj
+
+NO_I4B=                 # do not build isdn4bsd package
+
+DOC_LANG=     ru_RU.UTF-8  en_US.ISO8859-1
+#FETCH_CMD=/usr/local/bin/curl --raw -RC4 -O
+#FETCH_CMD=/usr/bin/fetch -6ARrvpT 10
+FETCH_CMD=/usr/bin/fetch -4ARrvpT 10
+#MASTER_SITE_OVERRIDE?=http://distcache.freebsd.org/ports-distfiles/${DIST_SUBDIR}/
+MASTER_SITE_BACKUP?=http://distcache.FreeBSD.org/ports-distfiles/${DIST_SUBDIR}/
+WITH_PKGNG=yes
+WITHOUT_X11=yes
+DEFAULT_VERSIONS+=ssl=base

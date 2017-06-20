@@ -1,0 +1,18 @@
+device		speaker
+#
+nodevice	pflog
+nodevice	pfsync
+#
+options		PANIC_REBOOT_WAIT_TIME=10
+#
+options		LIBICONV
+options		CD9660_ICONV
+options		MSDOSFS_ICONV
+options		UDF
+options		UDF_ICONV
+#
+options		LIBMCHAIN
+options		NETSMB		#SMB/CIFS requester
+options		SMBFS		#SMB/CIFS filesystem
+#
+options		FUSE

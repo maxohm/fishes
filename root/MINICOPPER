@@ -1,0 +1,62 @@
+#
+cpu		HAMMER
+ident	 	minicopper	
+maxusers	128
+options		VT_MAXWINDOWS=4
+#
+device		cpufreq
+#
+device		agp
+device		drm
+device		radeondrm
+#
+device		mpt
+options 	GEOM_NOP	# Test class.
+#
+device		ahci
+#
+device		mii
+device		brgphy		# Broadcom BCM54xx/57xx 1000baseTX
+#
+device		vmx		# VMware VMXNET3 Ethernet
+#
+device		pf
+#
+options		HZ=1000
+#options		DEVICE_POLLING
+options		IPI_PREEMPTION
+#
+options		TERMINAL_NORM_ATTR=(FG_LIGHTGREEN|BG_BLACK)
+options		TERMINAL_KERN_ATTR=(FG_LIGHTRED|BG_BLACK)
+#
+options		ALTQ
+#options	ALTQ_CBQ	# Class Based Queueing
+options		ALTQ_RED	# Random Early Detection
+options		ALTQ_RIO	# RED In/Out
+#options	ALTQ_HFSC	# Hierarchical Packet Scheduler
+#options	ALTQ_CDNR	# Traffic conditioner
+#options	ALTQ_NOPCC
+#
+makeoptions	MODULES_OVERRIDE="opensolaris zfs acl_nfs4 usb/urndis usb/cdce"
+# USB support
+options		USB_DEBUG		# enable debug msgs
+#device		uhci			# UHCI PCI->USB interface
+device		ohci			# OHCI PCI->USB interface
+device		ehci			# EHCI PCI->USB interface (USB 2.0)
+#device		xhci			# XHCI PCI->USB interface (USB 3.0)
+device		usb			# USB Bus (required)
+device		ukbd			# Keyboard
+device		umass			# Disks/Mass storage - Requires scbus and da
+device		uhid
+#device		uled
+device		ums
+device		uether
+device		urndis
+device		cdce
+#
+include		vmmini
+include		common
+include		wireless
+#
+options 	SCSI_DELAY=60000	# Be pessimistic about Joe SCSI device
+#
