@@ -13,7 +13,7 @@ WRKDIRPREFIX=/usr/obj
 NO_I4B=                 # do not build isdn4bsd package
 
 DOC_LANG=     ru_RU.UTF-8  en_US.ISO8859-1
-#FETCH_CMD=/usr/local/bin/curl --raw -RC4 -O
+#FETCH_CMD=/usr/local/bin/curl --raw -RC4 -O -
 #FETCH_CMD=/usr/bin/fetch -6ARrvpT 10
 FETCH_CMD=/usr/bin/fetch -4ARrvpT 10
 #MASTER_SITE_OVERRIDE?=http://distcache.freebsd.org/ports-distfiles/${DIST_SUBDIR}/

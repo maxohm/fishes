@@ -1,7 +1,7 @@
 device		speaker
 #
-nodevice	pflog
 nodevice	pfsync
+nodevice	pflog
 #
 options		PANIC_REBOOT_WAIT_TIME=10
 #

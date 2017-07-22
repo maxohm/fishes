@@ -14,26 +14,20 @@ ifcfg=`which ifconfig`
 rt=`which route`
 #
 dev=`$uconf | $grep $1 | $tr ':' '\n' | $head -n1`
+echo $dev
+exit
 #
-$uconf -d $dev power_off
-$leep 5
-$uconf -d $dev power_on
-$leep 5
-$uswitch -v$v -p$p -M$m &
-$leep 5
-$ifcfg ue0 192.168.8.2/24
-$leep 5
-$rt -n add -inet default 192.168.8.1
-$ifcfg ue0 up
-$leep 5
+$leep 1; $uconf -d $dev power_off
+$leep 5; $uconf -d $dev power_on
+$leep 5; $uswitch -v$v -p$p -M$m &
+$leep 9; $ifcfg ue0 192.168.8.2/24
+$leep 1; $rt add default 192.168.8.1
+$leep 1; $ifcfg ue0 up
 #
-/etc/pf/pfsnr.1.1.sh ue0
-#
-$leep 5
+/etc/pf/snr.1.sh ue0
 #
 ping="`which ping` -q -c 1 -W 1"
 ntpq="`which ntpdate` -4 -v -b"
 if $ping ntp1.vniiftri.ru >/dev/null; then
  $ntpq ntp1.vniiftri.ru >> /var/log/ntpd.log
 fi
-#
