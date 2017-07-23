@@ -1,8 +1,14 @@
 #!/bin/sh -x
 #
-TAR=`which tar`
-XZ=`which xz`
-SSL=`which openssl`
-PASS=`/usr/bin/uname -n`
+# FreeBSD archiving with LZMA2 compression and BLOWFISH encryption.
 #
-$TAR -cf - --exclude '*.txz' --exclude '*.tar.*' $1 | $XZ -zc9 | $SSL enc -bf-cbc -k $PASS -e > $1.tar.x
+# (c) 2017, maxohm [ at ] gmail.com
+#
+#
+tar=`which tar`
+xz=`which xz`
+ssl=`which openssl`
+host=`/usr/bin/uname -n`
+#
+$tar -cf - --exclude '*.txz' --exclude '*.tar.*' $1 | $xz -zc9 | $ssl enc -bf-cbc -k $host -e > $1.tar.bf
+#

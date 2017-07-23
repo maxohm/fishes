@@ -1,5 +1,8 @@
 #!/bin/sh -x
 #
+# FreeBSD simple mailing script. It sends basic server data and MOTD.
+#
+# (c) 2017, maxohm [ at ] gmail.com
 #
 PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
 #
