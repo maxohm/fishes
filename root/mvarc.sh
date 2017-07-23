@@ -1,42 +1,30 @@
 #!/bin/sh -x
 #
+# FreeBSD specialized archives moving script.
+#
+# (c) 2017, maxohm [ at ] gmail.com
+#
 test=`which test`
 #
-if $test "$1" = ""; then
- exit 1
-fi
-#
-if $test -c $1; then
+if $test -d $1; then
  echo ok $1
 else
  exit 1
 fi
 #
-if $test "$2" = ""; then
- exit 2
-fi
-#
-if $test -d $2; then
- echo ok $2
-else
- exit 2
-fi
-#
-mnt=`which mount`
-#
-$mnt -t msdosfs -fw -o large -o noexec -o noatime $1 $2
-#
+arcwd="$1`uname -n`/"
 md="`which mkdir` -vp"
 mov="`which mv` -fv"
-arcwd="$2`uname -n`"
 #
 $md $arcwd
-#
 if $test -d $arcwd; then
+ echo ok $arcwd
  $mov /*.tar.* $arcwd
- $mov /usr/*.tar.* $arcwd
+ $mov /usr/*.tar.* $arcwd/../
  $mov /usr/local/etc.tar.g $arcwd/uetc.tar.g
 else
- exit 3
+ exit 2
 fi
 #
+drop="`which dropbox_uploader.sh` -f ~/.dropbox_uploader upload"
+$drop $1 /

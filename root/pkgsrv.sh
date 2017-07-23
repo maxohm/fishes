@@ -1,24 +1,25 @@
 #!/bin/sh -x
 #
-PM="`which portmaster` -BDgf --force-config"
+# FreeBSD ports specialized script.
 #
-PM="$PM sysutils/logrotate" 
-PM="$PM sysutils/htop" 
-#PM="$PM net-mgmt/netmask" 
-#PM="$PM security/portsentry" 
-PM="$PM net/dropbox-uploader" 
-PM="$PM mail/ssmtp" 
-#PM="$PM ftp/vsftpd" 
-PM="$PM net-mgmt/arpwatch"
-PM="$PM net/samba44" 
-#PM="$PM net-p2p/transmission-daemon" 
-#PM="$PM net/miniupnpd" 
-#PM="$PM sysutils/smartmontools"
-#PM="$PM net/openntpd"
-PM="$PM security/tor-devel"
-PM="$PM misc/mc"
+# (c) 2017, maxohm [ at ] gmail.com
 #
-time="`which time` -h"
-$time $PM
+pmi="`which portmaster` -BDfgR --force-config"
 #
-
+PKG="sysutils/logrotate"
+PKG="$PKG sysutils/htop"
+#PKG="$PKG net-mgmt/netmask"
+#PKG="$PKG security/portsentry"
+PKG="$PKG net/dropbox-uploader"
+PKG="$PKG mail/ssmtp"
+#PKG="$PKG ftp/vsftpd"
+PKG="$PKG net-mgmt/arpwatch"
+PKG="$PKG net/samba46"
+#PKG="$PKG net-p2p/transmission-daemon"
+PKG="$PKG net/miniupnpd"
+PKG="$PKG sysutils/smartmontools"
+#PKG="$PKG net/openntpd"
+PKG="$PKG security/tor-devel"
+PKG="$PKG misc/mc"
+#
+$pmi $PKG

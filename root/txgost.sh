@@ -1,10 +1,12 @@
 #!/bin/sh -x
 #
-TAR=`which tar`
-XZ=`which xz`
-SSL=`which openssl`
-PASS=`/usr/bin/uname -n`
+# FreeBSD archiving with LZMA2 compression and GOST encryption.
 #
-$TAR -cf - --exclude '*.txz' --exclude '*.tar.*' $1 | $XZ -zc9e | $SSL enc -gost89 -k $PASS -e > $1.tar.g
+# (c) 2017, maxohm [ at ] gmail.com
 #
-
+tar=`which tar`
+xz=`which xz`
+ssl=`which openssl`
+host=`/usr/bin/uname -n`
+#
+$tar -cf - --exclude '*.txz' --exclude '*.tar.*' $1 | $xz -zc9e | $ssl enc -gost89 -k $host -e > $1.tar.g

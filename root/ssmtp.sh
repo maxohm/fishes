@@ -1,5 +1,8 @@
-#!/bin/sh
+#!/bin/sh -x
 #
+# FreeBSD simple mailing script. It sends basic server data and MOTD.
+#
+# (c) 2017, maxohm [ at ] gmail.com
 #
 PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin
 #
@@ -22,24 +25,23 @@ echo "Mime-Version: 1.0" >> $TMPMAIL
 echo "Content-Type: multipart/mixed; boundary=$BOUNDARY" >> $TMPMAIL
 
 # Create first part of the mail
-#echo "--$BOUNDARY" >> $TMPMAIL
-#echo "Content-Type: text/plain; charset=utf-8" >> $TMPMAIL
-#echo "" >> $TMPMAIL
-#cat $LOG >> $TMPMAIL
-#echo "" >> $TMPMAIL
-
 echo "--$BOUNDARY" >> $TMPMAIL
 echo "Content-Type: text/plain; charset=utf-8" >> $TMPMAIL
-echo "Content-Type: application/octet-stream" >> $TMPMAIL
-echo "Content-Transfer-Encoding: base64" >> $TMPMAIL
-echo "Content-Disposition: attachment; filename=\"$FILE.txt\"" >> $TMPMAIL
 echo "" >> $TMPMAIL
-
 cat $LOG >> $TMPMAIL
 echo "" >> $TMPMAIL
 
-echo "--$BOUNDARY--" >> $TMPMAIL
+#echo "--$BOUNDARY" >> $TMPMAIL
+#echo "Content-Type: text/plain; charset=utf-8" >> $TMPMAIL
+#echo "Content-Type: application/octet-stream" >> $TMPMAIL
+#echo "Content-Transfer-Encoding: base64" >> $TMPMAIL
+#echo "Content-Disposition: attachment; filename=\"$FILE.txt\"" >> $TMPMAIL
+#echo "" >> $TMPMAIL
+
+#/usr/bin/b64encode $1 $2 >> $TMPMAIL
+#echo "" >> $TMPMAIL
+
+#echo "--$BOUNDARY--" >> $TMPMAIL
 
 ssmtp -v4 $3 <$TMPMAIL
 exit 0
-
