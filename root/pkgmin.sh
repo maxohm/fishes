@@ -1,5 +1,9 @@
 #!/bin/sh -x
 #
+# FreeBSD ports specialized script.
+#
+# (c) 2017, maxohm [ at ] gmail.com
+#
 ping="`which ping` -q -c 1 -W 1"
 ntpq="`which ntpdate` -4 -v -b"
 #

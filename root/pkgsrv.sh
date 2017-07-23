@@ -1,5 +1,9 @@
 #!/bin/sh -x
 #
+# FreeBSD ports specialized script.
+#
+# (c) 2017, maxohm [ at ] gmail.com
+#
 pmi="`which portmaster` -BDfgR --force-config"
 #
 PKG="sysutils/logrotate"
@@ -19,4 +23,3 @@ PKG="$PKG security/tor-devel"
 PKG="$PKG misc/mc"
 #
 $pmi $PKG
-#
