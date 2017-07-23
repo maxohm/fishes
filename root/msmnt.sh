@@ -1,5 +1,9 @@
 #!/bin/sh -x
 #
+# FreeBSD msdosfs mount script. (depends on in-kernel GEOM_LABEL)
+#
+# (c) 2017, maxohm [ at ] gmail.com
+#
 test=`which test`
 #
 if $test "$1" = ""; then

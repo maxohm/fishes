@@ -1,5 +1,9 @@
 #!/bin/sh -x
 #
+# FreeBSD specialized archives moving script.
+#
+# (c) 2017, maxohm [ at ] gmail.com
+#
 test=`which test`
 #
 if $test -d $1; then
