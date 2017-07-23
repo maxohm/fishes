@@ -1,8 +1,0 @@
-#	$OpenBSD: ssh_config,v 1.30 2016/02/20 23:06:23 sobrado Exp $
-#	$FreeBSD: stable/11/crypto/openssh/ssh_config 311915 2017-01-11 05:56:40Z delphij $
-
-Protocol 2
-Ciphers aes256-cbc,blowfish-cbc,3des-cbc,aes256-ctr,aes192-cbc
-AddressFamily inet
-
-#   VersionAddendum FreeBSD-20161230
