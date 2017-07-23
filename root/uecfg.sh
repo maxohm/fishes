@@ -1,5 +1,7 @@
 #!/bin/sh -x
 #
+# FreeBSD ue* device config script w/ntpdating.
+#
 # (c) 2017, maxohm [ at ] gmail.com
 #
 leep=`which sleep`

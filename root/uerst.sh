@@ -1,5 +1,7 @@
 #!/bin/sh -x
 #
+# FreeBSD usb device resetting script.
+#
 # (c) 2017, maxohm [ at ] gmail.com
 #
 tr=`which tr`
