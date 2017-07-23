@@ -1,25 +1,25 @@
 #!/bin/sh -x
 #
-ping="`which ping`  -q -c 1 -W 1"
-if $ping inbox.ru >/dev/null; then
- #exit
-fi
+# FreeBSD ue* device config script w/ntpdating.
 #
+# (c) 2017, maxohm [ at ] gmail.com
+#
+leep=`which sleep`
+uswch="/usr/local/sbin/usb_modeswitch -c"
+uconf="/usr/local/etc/usb_modeswitch.conf"
 ifcfg=`which ifconfig`
-if $ifcfg | grep $1 > /dev/null; then
-else
- exit
-fi
-#
 rt=`which route`
+#
+$uswch $uconf &
+$leep 15
 $ifcfg $1 192.168.8.2/24
-$rt -n add -inet default 192.168.8.1
+$leep 5
+$rt add default 192.168.8.1
 $ifcfg $1 up
+$leep 5
 #
-/etc/pf/pf.snr.sh $1
-#
+ping="`which ping` -q -c 1 -W 1"
 ntpq="`which ntpdate` -4 -v -b"
 if $ping ntp1.vniiftri.ru >/dev/null; then
- $ntpq ntp1.vniiftri.ru > /var/log/ntpd.log
+ $ntpq ntp1.vniiftri.ru >> /var/log/ntpd.log
 fi
-#

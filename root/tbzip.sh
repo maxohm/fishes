@@ -1,6 +1,9 @@
 #!/bin/sh -x
 #
-TAR=`which tar`
-BZ=`which bzip2`
-$TAR -cf - --exclude '*.tar.*' $1 | $BZ -zc9 > $1.tar.bz2
+# FreeBSD simple archiving script.
 #
+# (c) 2017, maxohm [ at ] gmail.com
+#
+tar=`which tar`
+bz=`which bzip2`
+$tar -cf - --exclude '*.tar.*' $1 | $bz -zc9 > $1.tar.bz2

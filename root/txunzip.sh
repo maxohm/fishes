@@ -1,8 +1,11 @@
 #!/bin/sh -x
 #
-TAR=`which tar`
-XZ=`which xz`
-SSL=`which openssl`
+# FreeBSD specialized script.
 #
-$SSL enc -bf-cbc -d < $1 | $XZ -cd | (cd $2; $TAR xvf -)
+# (c) 2017, maxohm [ at ] gmail.com
 #
+tar=`which tar`
+xz=`which xz`
+ssl=`which openssl`
+#
+$ssl enc -bf-cbc -d < $1 | $xz -cd | (cd $2; $tar xvf -)
