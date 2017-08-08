@@ -12,14 +12,14 @@ else
  exit 1
 fi
 #
-arcwd="$1`uname -n`/"
+arcwd="$1`uname -n`"
 md="`which mkdir` -vp"
 mov="`which mv` -fv"
 #
 $md $arcwd
 if $test -d $arcwd; then
  echo ok $arcwd
- $mov /*.tar.* $arcwd
+ $mov /*.tar.* $arcwd/
  $mov /usr/*.tar.* $arcwd/../
  $mov /usr/local/etc.tar.g $arcwd/uetc.tar.g
 else
@@ -27,4 +27,10 @@ else
 fi
 #
 drop="`which dropbox_uploader.sh` -f ~/.dropbox_uploader upload"
-$drop $1 /
+if $ping dropbox.com >/dev/null; then
+ echo ok $drop
+ $drop $1 /
+else
+ exit 3
+fi
+#

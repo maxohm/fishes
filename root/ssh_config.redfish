@@ -1,0 +1,3 @@
+Protocol 2
+Ciphers aes256-cbc,blowfish-cbc,3des-cbc,aes256-ctr,aes192-cbc
+AddressFamily inet

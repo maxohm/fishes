@@ -70,5 +70,4 @@ device		md			# Memory "disks"
 # The `bpf' device enables the Berkeley Packet Filter.
 # Be aware of the administrative consequences of enabling this!
 # Note that 'bpf' is required for DHCP.
-#device		bpf			# Berkeley packet filter
-
+device		bpf			# Berkeley packet filter

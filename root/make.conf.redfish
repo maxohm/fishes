@@ -1,0 +1,22 @@
+# $FreeBSD: release/9.1.0/share/examples/etc/make.conf 223148 2011-06-16 12:28:37Z ru $
+#
+ALWAYS_CHECK_MAKE=
+CFLAGS= -march=nocona -msse3 -O2 -pipe 
+CPUTYPE?=nocona
+#CPUTYPE?=corei7-avx
+#
+MAKE_SHELL?=sh
+#
+COPTFLAGS=-O -pipe
+#
+FORCE_PKG_REGISTER=
+WRKDIRPREFIX=/usr/obj
+#
+DOC_LANG=ru_RU.UTF-8
+#FETCH_CMD=/usr/bin/fetch -6ARrvpT 10
+#MASTER_SITE_OVERRIDE?=http://distcache.freebsd.org/ports-distfiles/${DIST_SUBDIR}
+MASTER_SITE_BACKUP?=http://distcache.FreeBSD.org/ports-distfiles/${DIST_SUBDIR}
+WITH_PKGNG=yes
+WITHOUT_X11=yes
+DEFAULT_VERSIONS+=ssl=base
+#

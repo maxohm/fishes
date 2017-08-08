@@ -1,0 +1,16 @@
+Port 13107
+Protocol 2
+Ciphers aes256-cbc,blowfish-cbc,3des-cbc,aes256-ctr,aes192-cbc
+AddressFamily inet
+
+ServerKeyBits 4096
+LoginGraceTime 1m
+PermitRootLogin no
+MaxAuthTries 2
+PermitEmptyPasswords no
+X11Forwarding no
+TCPKeepAlive no
+MaxStartups 1
+StrictModes yes
+
+Subsystem	sftp	/usr/libexec/sftp-server

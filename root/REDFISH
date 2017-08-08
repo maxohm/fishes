@@ -6,7 +6,6 @@ maxusers	128
 options		VT_MAXWINDOWS=4
 #
 device		mpt
-options 	GEOM_NOP	# Test class.
 #
 device		mii
 device		vmx		# VMware VMXNET3 Ethernet
@@ -28,7 +27,7 @@ options		ALTQ_RIO	# RED In/Out
 #options	ALTQ_CDNR	# Traffic conditioner
 #options	ALTQ_NOPCC
 #
-makeoptions	MODULES_OVERRIDE="opensolaris zfs acl_nfs4 usb/urndis"
+makeoptions	MODULES_OVERRIDE="opensolaris zfs acl_nfs4 usb/urndis crypto cryptodev aesni"
 #
 # USB support
 options         USB_DEBUG               # enable debug msgs
@@ -51,4 +50,42 @@ include 	common
 device crypto
 device cryptodev
 device aesni
+#device filemon
 #
+#options 	GEOM_AES		# Don't use, use GEOM_BDE
+#options 	GEOM_BDE		# Disk encryption.
+#options 	GEOM_BSD		# BSD disklabels
+options 	GEOM_CACHE		# Disk cache.
+options 	GEOM_CONCAT		# Disk concatenation.
+#options 	GEOM_ELI		# Disk encryption.
+options 	GEOM_FOX		# Redundant path mitigation
+#options 	GEOM_GATE		# Userland services.
+#options 	GEOM_JOURNAL		# Journaling.
+options 	GEOM_LABEL		# Providers labelization.
+#options 	GEOM_LINUX_LVM		# Linux LVM2 volumes
+options 	GEOM_MAP		# Map based partitioning
+options 	GEOM_MBR		# DOS/MBR partitioning
+options 	GEOM_MIRROR		# Disk mirroring.
+options 	GEOM_MULTIPATH		# Disk multipath
+options 	GEOM_NOP		# Test class.
+#options 	GEOM_PART_APM		# Apple partitioning
+#options 	GEOM_PART_BSD		# BSD disklabel
+#options 	GEOM_PART_BSD64		# BSD disklabel64
+#options 	GEOM_PART_EBR		# Extended Boot Records
+#options 	GEOM_PART_EBR_COMPAT	# Backward compatible partition names
+#options 	GEOM_PART_GPT		# GPT partitioning
+#options 	GEOM_PART_LDM		# Logical Disk Manager
+#options 	GEOM_PART_MBR		# MBR partitioning
+#options 	GEOM_PART_PC98		# PC-9800 disk partitioning
+#options 	GEOM_PART_VTOC8		# SMI VTOC8 disk label
+#options 	GEOM_PC98		# NEC PC9800 partitioning
+#options 	GEOM_RAID		# Soft RAID functionality.
+#options 	GEOM_RAID3		# RAID3 functionality.
+#options 	GEOM_SHSEC		# Shared secret.
+#options 	GEOM_STRIPE		# Disk striping.
+#options 	GEOM_SUNLABEL		# Sun/Solaris partitioning
+options 	GEOM_UZIP		# Read-only compressed disks
+#options 	GEOM_VINUM		# Vinum logical volume manager
+#options 	GEOM_VIRSTOR		# Virtual storage.
+options 	GEOM_VOL		# Volume names from UFS superblock
+options 	GEOM_ZERO		# Performance testing helper.
