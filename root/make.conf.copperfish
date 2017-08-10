@@ -1,7 +1,7 @@
 # $FreeBSD: release/9.1.0/share/examples/etc/make.conf 223148 2011-06-16 12:28:37Z ru $
 #
-CPUTYPE?=k8-sse3
-CFLAGS= -march=k8 -msse3 -O2 -pipe
+CPUTYPE?=nocona
+CFLAGS= -march=nocona -msse3 -O2 -pipe
 #-fno-strict-aliasing
 #CFLAGS= -march=k8 -O2 -pipe -fomit-frame-pointer 
 MAKE_SHELL?=sh

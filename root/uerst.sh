@@ -4,14 +4,24 @@
 #
 # (c) 2017, maxohm [ at ] gmail.com
 #
-tr=`which tr`
 grep=`which grep`
-head=`which head`
+head="`which head` -n1"
+ifcfg=`which ifconfig`
+tr="`which tr` ':' '\n'"
+test=`which test`
+ue=`$ifcfg | $grep ue | $tr | $head`
+#
+#
+if $test -n $ue; then
+ echo ok $ue
+ exit 0
+else
+fi
+#
 leep=`which sleep`
 uconf=`which usbconfig`
-test=`which test`
 #
-dev=`$uconf | $grep $1 | $tr ':' '\n' | $head -n1`
+dev=`$uconf | $grep $1 | $tr | $head`
 if $test -c /dev/$dev; then
  echo ok $dev
 else

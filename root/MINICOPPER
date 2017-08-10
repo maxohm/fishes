@@ -4,18 +4,18 @@ maxusers	128
 options		VT_MAXWINDOWS=4
 #
 #device		cpufreq
+#device		cpuctl
 #
 device		agp
 device		drm
 device		radeondrm
 #
 device		mpt
-options		GEOM_NOP	# Test class.
-#
 device		ahci
 #
 device		mii
-device		brgphy		# Broadcom BCM54xx/57xx 1000baseTX
+#device	 	bge	
+#device		brgphy		# Broadcom BCM54xx/57xx 1000baseTX
 #
 device		vmx		# VMware VMXNET3 Ethernet
 #
@@ -36,11 +36,11 @@ options		ALTQ_RIO	# RED In/Out
 #options	ALTQ_CDNR	# Traffic conditioner
 #options	ALTQ_NOPCC
 #
-makeoptions	MODULES_OVERRIDE="opensolaris zfs acl_nfs4 usb/urndis usb/cdce aesni cryptodev crypto"
+makeoptions	MODULES_OVERRIDE="opensolaris zfs acl_nfs4 usb/urndis usb/cdce"
 #
 # USB support
 options		USB_DEBUG		# enable debug msgs
-device		uhci			# UHCI PCI->USB interface
+#device		uhci			# UHCI PCI->USB interface
 device		ohci			# OHCI PCI->USB interface
 device		ehci			# EHCI PCI->USB interface (USB 2.0)
 #device		xhci			# XHCI PCI->USB interface (USB 3.0)
@@ -54,9 +54,9 @@ device		uether
 device		urndis
 device		cdce
 #
-device		aesni
-device		crypto
-device		cryptodev
+#device		aesni
+#device		crypto
+#device		cryptodev
 #
 include		vmmini
 include		common
@@ -79,13 +79,13 @@ options 	GEOM_MIRROR		# Disk mirroring.
 options 	GEOM_MULTIPATH		# Disk multipath
 options 	GEOM_NOP		# Test class.
 #options 	GEOM_PART_APM		# Apple partitioning
-options 	GEOM_PART_BSD		# BSD disklabel
+#options 	GEOM_PART_BSD		# BSD disklabel
 options 	GEOM_PART_BSD64		# BSD disklabel64
 #options 	GEOM_PART_EBR		# Extended Boot Records
 #options 	GEOM_PART_EBR_COMPAT	# Backward compatible partition names
-options 	GEOM_PART_GPT		# GPT partitioning
+#options 	GEOM_PART_GPT		# GPT partitioning
 #options 	GEOM_PART_LDM		# Logical Disk Manager
-options 	GEOM_PART_MBR		# MBR partitioning
+#options 	GEOM_PART_MBR		# MBR partitioning
 #options 	GEOM_PART_PC98		# PC-9800 disk partitioning
 #options 	GEOM_PART_VTOC8		# SMI VTOC8 disk label
 #options 	GEOM_PC98		# NEC PC9800 partitioning
