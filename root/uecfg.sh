@@ -20,6 +20,6 @@ $leep 5
 #
 ping="`which ping` -q -c 1 -W 1"
 ntpq="`which ntpdate` -4 -v -b"
-if $ping ntp1.vniiftri.ru >/dev/null; then
- $ntpq ntp1.vniiftri.ru >> /var/log/ntpd.log
+if $ping ntp1.niiftri.irkutsk.ru >/dev/null; then
+ $ntpq ntp1.niiftri.irkutsk.ru >> /var/log/ntpd.log
 fi

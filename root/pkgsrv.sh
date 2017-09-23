@@ -22,4 +22,8 @@ PKG="$PKG sysutils/smartmontools"
 PKG="$PKG security/tor-devel"
 PKG="$PKG misc/mc"
 #
+#PKG="$PKG devel/git"
+#PKG="$PKG net/openntpd"
+#PKG="$PKG net/openntpd"
+#
 $pmi $PKG
