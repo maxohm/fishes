@@ -4,7 +4,7 @@
 #
 # (c) 2017, maxohm [ at ] gmail.com
 #
-pmi="`which portmaster` -BDfgR --force-config"
+pmi="`which portmaster` -BDfR --force-config"
 #
 PKG="sysutils/logrotate"
 PKG="$PKG sysutils/htop"
@@ -17,7 +17,7 @@ PKG="$PKG net-mgmt/arpwatch"
 #PKG="$PKG net/samba46"
 #PKG="$PKG net-p2p/transmission-daemon"
 PKG="$PKG net/miniupnpd"
-PKG="$PKG sysutils/smartmontools"
+#PKG="$PKG sysutils/smartmontools"
 #PKG="$PKG net/openntpd"
 PKG="$PKG security/tor-devel"
 PKG="$PKG misc/mc"

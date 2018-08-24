@@ -35,8 +35,8 @@ device		pci
 # ATA/SCSI peripherals
 device		scbus			# SCSI bus (required for ATA/SCSI)
 device		da			# Direct Access (disks)
-device		pass			# Passthrough device (direct ATA/SCSI access)
-device		ses			# Enclosure Services (SES and SAF-TE)
+#device		pass			# Passthrough device (direct ATA/SCSI access)
+#device		ses			# Enclosure Services (SES and SAF-TE)
 
 # atkbdc0 controls both the keyboard and the PS/2 mouse
 device		atkbdc			# AT keyboard controller
@@ -49,8 +49,20 @@ device		vga			# VGA video card driver
 
 device		splash			# Splash screen and screen saver support
 
+device          sc
+
 # vt is the new video console driver
-device		vt
+device          vt
+#options         VT_ALT_TO_ESC_HACK=1    # Prepend ESC sequence to ALT keys
+options         VT_MAXWINDOWS=4        # Number of virtual consoles
+options         VT_TWOBUTTON_MOUSE      # Use right mouse button to paste
+# The following options set the default framebuffer size.
+options         VT_FB_DEFAULT_HEIGHT=800
+options         VT_FB_DEFAULT_WIDTH=1280
+# The following options will let you change the default vt terminal colors.
+options         TERMINAL_NORM_ATTR=(FG_GREEN|BG_BLACK)
+options         TERMINAL_KERN_ATTR=(FG_LIGHTRED|BG_BLACK)
+#
 device		vt_vga
 device		vt_efifb
 
