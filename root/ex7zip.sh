@@ -12,6 +12,6 @@ host=`/usr/bin/uname -n`
 rm=`which rm`
 #
 $xz a -mtc=on -mx=9 -myx=9 -ssw -t7z -y -- $1.7z $1 > /dev/null
-$cat $1.7z | $ssl enc -aes-256-cbc -k $host -e > $1.g
+$cat $1.7z | $ssl enc -aes-256-cbc -k $host -e > $1.x
 $rm -f $1.7z
 #
