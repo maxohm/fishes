@@ -1,0 +1,41 @@
+# $FreeBSD: stable/10/etc/sysctl.conf 112200 2003-03-13 18:43:50Z mux $
+#
+#  This file is read when going to multi-user and its contents piped thru
+#  ``sysctl'' to adjust kernel values.  ``man 5 sysctl.conf'' for details.
+#
+kern.hz=1000
+#
+security.bsd.see_other_uids=0
+#kern.securelevel=-1
+#
+vfs.vmiodirenable=1
+kern.maxfiles=32767
+kern.ipc.shm_use_phys=1
+kern.ipc.shmall=524288
+kern.ipc.shmmax=1073741824
+kern.ipc.somaxconn=1024
+kern.ipc.maxsockbuf=16777216
+#
+net.inet.ip.forwarding=1
+net.inet.tcp.always_keepalive=0
+net.inet.tcp.hostcache.expire=1
+net.inet.tcp.rfc1323=1
+#
+net.inet.tcp.recvbuf_auto=0
+net.inet.tcp.recvspace=1048576
+net.inet.tcp.recvbuf_max=16777216
+net.inet.tcp.sendbuf_auto=0
+net.inet.tcp.sendspace=1048576
+net.inet.tcp.sendbuf_max=16777216
+#
+kern.random.sys.harvest.ethernet=0
+kern.random.sys.harvest.point_to_point=0
+kern.random.sys.harvest.interrupt=0
+#
+#hw.acpi.thermal.user_override=1
+#hw.acpi.thermal.tz0._PSV=75C
+#hw.acpi.thermal.tz0.passive_cooling=1
+#
+#debug.cpufreq.verbose=0
+debug.cpufreq.lowest=1137
+
