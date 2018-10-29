@@ -1,8 +1,3 @@
-# $FreeBSD: stable/10/etc/sysctl.conf 112200 2003-03-13 18:43:50Z mux $
-#
-#  This file is read when going to multi-user and its contents piped thru
-#  ``sysctl'' to adjust kernel values.  ``man 5 sysctl.conf'' for details.
-#
 kern.hz=1000
 #
 security.bsd.see_other_uids=0
@@ -38,4 +33,3 @@ kern.random.sys.harvest.interrupt=0
 #
 #debug.cpufreq.verbose=0
 debug.cpufreq.lowest=1137
-
