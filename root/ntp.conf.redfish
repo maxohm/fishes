@@ -1,0 +1,4 @@
+server ntp1.niiftri.irkutsk.ru
+server ntp2.niiftri.irkutsk.ru
+driftfile /var/db/ntp.drift
+leapfile "/var/db/ntpd.leap-seconds.list"
