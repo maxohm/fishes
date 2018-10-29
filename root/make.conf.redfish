@@ -1,7 +1,7 @@
 # $FreeBSD: release/9.1.0/share/examples/etc/make.conf 223148 2011-06-16 12:28:37Z ru $
 #
 ALWAYS_CHECK_MAKE=
-CFLAGS= -march=nocona -msse3 -O2 -pipe 
+CFLAGS=-march=nocona -O2 -pipe 
 CPUTYPE?=nocona
 #CPUTYPE?=corei7-avx
 #
@@ -19,4 +19,5 @@ MASTER_SITE_BACKUP?=http://distcache.FreeBSD.org/ports-distfiles/${DIST_SUBDIR}
 WITH_PKGNG=yes
 WITHOUT_X11=yes
 DEFAULT_VERSIONS+=ssl=base
+ALLOW_UNSUPPORTED_SYSTEM=yes
 #

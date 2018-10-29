@@ -4,9 +4,10 @@
 #
 # (c) 2017, maxohm [ at ] gmail.com
 #
-make="`which make` -DNOCLEAN -DNO_CLEAN"
+make="`which make` -DNO_CLEAN -DNOCLEAN"
 #
-$make -j5 buildworld > /dev/null
+$make buildworld
+$make kernel-toolchain KERNCONF=$1
 $make buildkernel KERNCONF=$1
 $make reinstallkernel KERNCONF=$1
 #

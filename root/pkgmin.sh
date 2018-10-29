@@ -39,7 +39,7 @@ RML="$RML vietnamese"
 #
 cd /usr/ports; $svnc; $svnc; $make index; #$rm $RML;
 #
-cd /usr/ports/ports-mgmt/pkg; make deinstall install clean
+cd /usr/ports/ports-mgmt/pkg; make -DALLOW_UNSUPPORTED_SYSTEM deinstall install clean
 cd /usr/ports/ports-mgmt/portmaster; make install clean
 #
 pmi="`which portmaster` -BDf --force-config"
@@ -48,8 +48,5 @@ PKG="net/isc-dhcp44-server"
 PKG="$PKG sysutils/screen"
 PKG="$PKG sysutils/usb_modeswitch"
 PKG="$PKG archivers/p7zip"
-#
-$pkg audit -Fr
-#
 $pmi $PKG
 #

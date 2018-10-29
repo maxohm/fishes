@@ -2,7 +2,7 @@
 cpu             HAMMER
 ident           redfish 
 maxusers	128
-options		VT_MAXWINDOWS=4
+#options	VT_MAXWINDOWS=4
 #
 device		mpt
 #
@@ -15,8 +15,8 @@ options		HZ=100
 #options	DEVICE_POLLING
 options		IPI_PREEMPTION
 #
-options		TERMINAL_NORM_ATTR=(FG_LIGHTGREEN|BG_BLACK)
-options		TERMINAL_KERN_ATTR=(FG_LIGHTRED|BG_BLACK)
+#options	TERMINAL_NORM_ATTR=(FG_LIGHTGREEN|BG_BLACK)
+#options	TERMINAL_KERN_ATTR=(FG_LIGHTRED|BG_BLACK)
 #
 options		ALTQ
 #options	ALTQ_CBQ	# Class Based Queueing
@@ -43,8 +43,8 @@ device          uhid
 device          uether
 device          urndis
 #
-include  	vmmini	
-include 	common
+include		vmmini
+include		common
 #
 #device crypto
 #device cryptodev
@@ -63,7 +63,7 @@ options 	GEOM_FOX		# Redundant path mitigation
 options 	GEOM_LABEL		# Providers labelization.
 #options 	GEOM_LINUX_LVM		# Linux LVM2 volumes
 #options 	GEOM_MAP		# Map based partitioning
-options 	GEOM_MBR		# DOS/MBR partitioning
+#options 	GEOM_MBR		# DOS/MBR partitioning
 options 	GEOM_MIRROR		# Disk mirroring.
 options 	GEOM_MULTIPATH		# Disk multipath
 options 	GEOM_NOP		# Test class.

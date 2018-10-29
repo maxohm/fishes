@@ -1,12 +1,12 @@
 #=======HOURLY=========================================
 #00      *       *       *       *       root    /usr/sbin/service transmission stop
-02      *       *       *       *       root    /etc/pf/pf.snr.sh ue0
+02      *       *       *       *       root    /etc/pf/snr.1.sh ue0
 03      *       *       *       *       root    /usr/local/sbin/logrotate -s/var/log/logrotate.stat /usr/local/etc/logrotate.conf
 04      *       *       *       *       root    /usr/bin/uname -a > /etc/motd && /usr/bin/uptime >> /etc/motd
 05      *       *       *       *       root    /root/ssmtp.sh /etc motd e5hskse0ida0@bk.ru
 #06      *       *       *       *       root    /usr/sbin/service transmission start
 #=======DAILY==========================================
-06      12      *       *       *       root    /root/mvarc.sh /dev/msdosfs/USB_STRELEC /archive/
+06      12      *       *       *       root    /root/mvarc.sh /archive/
 10      12      *       *       *       root    /usr/sbin/service arpwatch stop
 11      12      *       *       *       root    /usr/sbin/service arpwatch start
 12      12      *       *       *       root    /usr/local/bin/dropbox_uploader.sh -f /root/.dropbox_uploader upload /archive/$HOST /
@@ -14,11 +14,11 @@
 13      13      *       *       *       root    /usr/sbin/pkg audit -Fr > /var/log/pkgaudit.log
 14      13      *       *       *       root    /usr/local/sbin/portmaster -L > /var/log/portmaster.log
 #=======WEEKLY=========================================
-15      12      *       *       1       root    /root/txgost.sh /etc
-16      12      *       *       2       root    /root/txgost.sh /root
-17      13      *       *       3       root    /root/txgost.sh /usr/src
-18      14      *       *       4       root    /root/txgost.sh /usr/ports
-19      15      *       *       3       root    /root/txgost.sh /usr/local/etc
-20      15      *       *       2       root    /root/txgost.sh /var
-21      15      *       *       1       root    /root/txgost.sh /home
+#15      12      *       *       1       root    /root/txgost.sh /etc
+#16      12      *       *       2       root    /root/txgost.sh /root
+#17      13      *       *       3       root    /root/txgost.sh /usr/src
+#18      14      *       *       4       root    /root/txgost.sh /usr/ports
+#19      15      *       *       3       root    /root/txgost.sh /usr/local/etc
+#20      15      *       *       2       root    /root/txgost.sh /var
+#21      15      *       *       1       root    /root/txgost.sh /home
 #======================================================
