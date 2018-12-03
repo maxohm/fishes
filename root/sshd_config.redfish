@@ -3,7 +3,7 @@ Protocol 2
 Ciphers aes256-cbc,blowfish-cbc,3des-cbc,aes256-ctr,aes192-cbc
 AddressFamily inet
 
-ServerKeyBits 4096
+#ServerKeyBits 4096
 LoginGraceTime 1m
 PermitRootLogin no
 MaxAuthTries 2
