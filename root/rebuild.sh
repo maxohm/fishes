@@ -4,6 +4,7 @@
 #
 # (c) 2017, maxohm [ at ] gmail.com
 #
+cd /usr/src
 ~/clean.sh > /dev/null
 #
 mkdir -vp /usr/obj/usr/src/tmp/usr/lib/i18n

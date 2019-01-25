@@ -6,6 +6,8 @@
 #
 make="`which make` -DNO_CLEAN -DNOCLEAN"
 #
+cd /usr/src
+#
 $make buildworld
 $make kernel-toolchain KERNCONF=$1
 $make buildkernel KERNCONF=$1

@@ -12,7 +12,7 @@ else
  exit 1
 fi
 #
-arcwd="$1`uname -n`"
+arcwd="$1`uname -i`"
 md="`which mkdir` -vp"
 mov="`which mv` -fv"
 #
