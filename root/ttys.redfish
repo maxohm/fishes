@@ -1,5 +1,11 @@
+#
+# REDFISH TTYS
+#
+# (c) 2019, maxohm [ at ] gmail.com
+#
 ttyv0	"/usr/libexec/getty Pc"		xterm	on  secure
 # Virtual terminals
 ttyv1	"/usr/libexec/getty Pc"		cons25r	on  insecure
 ttyv2	"/usr/libexec/getty Pc"		cons25r	on  insecure
 ttyv3	"/usr/libexec/getty Pc"		cons25r	on  insecure
+#

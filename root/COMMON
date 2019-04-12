@@ -1,3 +1,8 @@
+#
+# REDFISH COMMON
+#
+# (c) 2019, maxohm [ at ] gmail.com
+#
 device		speaker
 #
 nodevice	pflog

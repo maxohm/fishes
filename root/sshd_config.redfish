@@ -1,3 +1,8 @@
+#
+# REDFISH SSHD_CONFIG
+#
+# (c) 2019, maxohm [ at ] gmail.com
+#
 Port 13107
 Protocol 2
 Ciphers aes256-cbc,blowfish-cbc,3des-cbc,aes256-ctr,aes192-cbc

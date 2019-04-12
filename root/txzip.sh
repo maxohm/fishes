@@ -1,8 +1,8 @@
 #!/bin/sh -x
 #
-# XZ archiving max compression.
+# TAR archiving (LZMA2 compression)
 #
-# (c) 2017, maxohm [ at ] gmail.com
+# (c) 2019, maxohm [ at ] gmail.com
 #
 #
 tar=`which tar`

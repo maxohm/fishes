@@ -1,8 +1,8 @@
 #!/bin/sh -x
 #
-# FreeBSD specialized script.
+# specialized
 #
-# (c) 2018, maxohm [ at ] gmail.com
+# (c) 2019, maxohm [ at ] gmail.com
 #
 tar=`which tar`
 xz=`which 7z`

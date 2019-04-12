@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/bin/sh -x
+#
+# DVD-to-mp4 conversion
+#
+# (c) 2019, maxohm [ at ] gmail.com
 #
 
 CAT=`which tccat`

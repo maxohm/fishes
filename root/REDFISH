@@ -1,4 +1,8 @@
 #
+# REDFISH HW
+#
+# (c) 2019, maxohm [ at ] gmail.com
+#
 cpu		HAMMER
 ident		redfish
 maxusers	128

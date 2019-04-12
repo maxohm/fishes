@@ -2,6 +2,12 @@
 # $FreeBSD: stable/11/sys/amd64/conf/GENERIC 302410 2016-07-08 00:22:14Z gjb $
 #
 
+#
+# REDFISH CORE
+#
+# (c) 2019, maxohm [ at ] gmail.com
+#
+
 #makeoptions	DEBUG=-g		# Build kernel with gdb(1) debug symbols
 #makeoptions	WITH_CTF=1		# Run ctfconvert(1) for DTrace support
 

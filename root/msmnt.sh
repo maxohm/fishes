@@ -1,8 +1,8 @@
 #!/bin/sh -x
 #
-# FreeBSD msdosfs mount script. (depends on in-kernel GEOM_LABEL)
+# FreeBSD msdosfs mount script. (using GEOM_LABEL)
 #
-# (c) 2017, maxohm [ at ] gmail.com
+# (c) 2019, maxohm [ at ] gmail.com
 #
 test=`which test`
 #
@@ -30,3 +30,4 @@ fi
 mnt="`which mount` -t msdosfs -o large -o noexec -o noatime -fw"
 $mnt $dev $2
 $mnt -u $dev $2
+#

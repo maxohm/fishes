@@ -1,10 +1,11 @@
 #!/bin/sh -x
 #
-# FreeBSD src cleaning script.
+# FreeBSD src tree cleaning
 #
-# (c) 2017, maxohm [ at ] gmail.com
+# (c) 2019, maxohm [ at ] gmail.com
 #
 chflags -R noschg /usr/obj
 rm -rfd /usr/obj/*
 make cleandir
 make cleandir
+#

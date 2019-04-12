@@ -1,6 +1,11 @@
+#
+# REDFISH OPENSSL.CONF
+#
+# (c) 2019, maxohm [ at ] gmail.com
+#
 openssl_conf = openssl_def
 
-#Все что ниже - в конец
+# -> в конец
 [openssl_def]
 engines = engine_section
 
@@ -12,3 +17,4 @@ engine_id = gost
 dynamic_path = /usr/lib/engines/libgost.so
 default_algorithms = ALL
 CRYPT_PARAMS = id-Gost28147-89-CryptoPro-A-ParamSet 
+#

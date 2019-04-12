@@ -1,8 +1,8 @@
 #!/bin/sh -x
 #
-# FreeBSD ports specialized script.
+# REDFISH PACKAGES LIST
 #
-# (c) 2017, maxohm [ at ] gmail.com
+# (c) 2019, maxohm [ at ] gmail.com
 #
 pmi="`which portmaster` -BDfR --force-config"
 #
@@ -23,3 +23,4 @@ PKG="$PKG security/tor-devel"
 PKG="$PKG misc/mc"
 #
 $pmi $PKG
+#

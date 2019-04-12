@@ -1,8 +1,8 @@
 #!/bin/sh -x
 #
-# FreeBSD ue* device config script w/ntpdating.
+# specialized
 #
-# (c) 2017, maxohm [ at ] gmail.com
+# (c) 2019, maxohm [ at ] gmail.com
 #
 leep=`which sleep`
 uswch="/usr/local/sbin/usb_modeswitch -c"
@@ -23,3 +23,4 @@ ntpq="`which ntpdate` -4 -v -b"
 if $ping ntp1.vniiftri.ru >/dev/null; then
  $ntpq ntp1.vniiftri.ru >> /var/log/ntpd.log
 fi
+#

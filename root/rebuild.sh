@@ -1,8 +1,8 @@
 #!/bin/sh -x
 #
-# FreeBSD src rebuild script.
+# FreeBSD src rebuild
 #
-# (c) 2017, maxohm [ at ] gmail.com
+# (c) 2019, maxohm [ at ] gmail.com
 #
 cd /usr/src
 ~/clean.sh > /dev/null
@@ -15,3 +15,4 @@ make installkernel KERNCONF=$1
 #
 chmod a-x /usr/libexec/sendmail/sendmail
 cp -fv ~/*.fnt /usr/share/vt/fonts/
+#

@@ -1,5 +1,12 @@
 # $FreeBSD: release/9.1.0/share/examples/etc/make.conf 223148 2011-06-16 12:28:37Z ru $
 #
+
+#
+# REDFISH MAKE.CONF
+#
+# (c) 2017, maxohm [ at ] gmail.com
+#
+
 ALWAYS_CHECK_MAKE=
 CFLAGS=-march=nocona -O2 -pipe 
 CPUTYPE?=nocona

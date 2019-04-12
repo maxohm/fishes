@@ -1,3 +1,8 @@
+#
+# REDFISH SYSCTL.CONF
+#
+# (c) 2019, maxohm [ at ] gmail.com
+#
 kern.hz=1000
 #
 security.bsd.see_other_uids=0
@@ -33,3 +38,4 @@ kern.random.sys.harvest.interrupt=0
 #
 #debug.cpufreq.verbose=0
 debug.cpufreq.lowest=1137
+#

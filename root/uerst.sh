@@ -1,8 +1,8 @@
 #!/bin/sh -x
 #
-# FreeBSD usb device resetting script.
+# specialized
 #
-# (c) 2017, maxohm [ at ] gmail.com
+# (c) 2019, maxohm [ at ] gmail.com
 #
 tr=`which tr`
 grep=`which grep`
@@ -21,3 +21,4 @@ fi
 $leep 1; $uconf -d $dev power_off
 $leep 5; $uconf -d $dev power_on
 $leep 9
+#

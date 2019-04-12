@@ -1,8 +1,8 @@
 #!/bin/sh -x
 #
-# FreeBSD src rebuild script.
+# FreeBSD src build
 #
-# (c) 2017, maxohm [ at ] gmail.com
+# (c) 2019, maxohm [ at ] gmail.com
 #
 make="`which make` -DNO_CLEAN -DNOCLEAN"
 #
@@ -14,3 +14,4 @@ $make buildkernel KERNCONF=$1
 $make reinstallkernel KERNCONF=$1
 #
 chmod a-x /usr/libexec/sendmail/sendmail
+#
