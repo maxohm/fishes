@@ -12,4 +12,3 @@ $install kbuild acpica-tools xsltproc libidl-dev libelf-dev libcurl4-openssl-dev
 #source ./env.sh
 #kmk all
 #cd ./out/linux.amd64/release/bin/src
-#
