@@ -4,5 +4,5 @@
 #
 install="sudo `which apt-get` -fy install"
 #
-$install libcppunit-dev libfuse-dev pkg-config yasm gtk2.0-dev intltool
+$install libcppunit-dev libfuse-dev pkg-config yasm gtk2.0-dev intltool libgail-common
 #
