@@ -1,5 +1,2 @@
-#
-# (c) maxohm [ at ] gmail.com
-# В мастер-бранче ничего нет!
-# См.специализированные бранчи!
-#
+# msrepo
+Use at your own risc.

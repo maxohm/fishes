@@ -1,0 +1,7 @@
+REGEDIT4
+; %windir%\system32\regedt32.exe
+;
+; (c) 2019, maxohm [ at ] gmail.com
+;
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisableThumbnailCache "=dword:00000001

@@ -1,0 +1,19 @@
+REGEDIT4
+; %windir%\system32\regedt32.exe
+;
+; (c) 2019, maxohm [ at ] gmail.com
+;
+[HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\AppPrivacy]
+"LetAppsAccessCalendar"=dword:00000000
+"LetAppsAccessCallHistory"=dword:00000000
+"LetAppsAccessCamera"=dword:00000000
+"LetAppsAccessContacts"=dword:00000000
+"LetAppsAccessEmail"=dword:00000000
+"LetAppsAccessLocation"=dword:00000000
+"LetAppsAccessMessaging"=dword:00000000
+"LetAppsAccessMicrophone"=dword:00000000
+"LetAppsAccessMotion"=dword:00000000
+"LetAppsAccessRadios"=dword:00000000
+"LetAppsAccessAccountInfo"=dword:00000000
+"LetAppsSyncWithDevices"=dword:00000000
+"LetAppsAccessTrustedDevices"=dword:00000000

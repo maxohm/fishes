@@ -1,0 +1,1 @@
+@c:\PROGRA~2\VMware\VMWARE~1\vmplayer.exe --unity -- vm.vmx
