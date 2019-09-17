@@ -1,5 +1,9 @@
 #
 # (c) maxohm [ at ] gmail.com
-# конфигурация роутера для предприятия
-# FreeBSD
+#
+# Скрипты конфигураций и настроек (ОС FreeBSD и клонов)
+# многофункционального сервера для предприятия
+#
+# Enterprise server config scripts
+# (FreeBSD-like OSes)
 #
