@@ -2,14 +2,11 @@
 #
 # (c) 2019, maxohm [ at ] gmail.com
 #
-test=`which test`
 sw=`swapon | grep dev | tr ' ' '\n' | head -n1`
-rsize="`df -ah / | tr 'G' '\n' | tail -n2 | head -n1 | tr -d ' ' | tr ',' '.'`G"
+#rsize="`df -ah / | tr 'G' '\n' | tail -n2 | head -n1 | tr -d ' ' | tr ',' '.'`G"
 #
-sync=`which sync`
+test=`which test`
 dzero="`which dd` if=/dev/zero bs=16M conv=notrunc"
-pwroff="`which shutdown` -hP now"
-dnull="`which dd` if=/dev/null"
 #
 if $test -b $sw; then
  swapoff $sw
@@ -19,6 +16,10 @@ if $test -b $sw; then
 else
  exit 1
 fi
+#
+dnull="`which dd` if=/dev/null"
+sync=`which sync`
+pwroff="`which shutdown` -hP now"
 #
 $dzero of=/zerofile
 $dnull of=/zerofile;$sync;$sync;$pwroff
