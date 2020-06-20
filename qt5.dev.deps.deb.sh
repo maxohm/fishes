@@ -15,7 +15,7 @@ $install git
 #
 $install g++-6
 #
-#sudo update-alternatives --remove-all gcc 
+#./sudo update-alternatives --remove-all gcc 
 #sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 20
 #sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 10
 #sudo update-alternatives --install /usr/bin/cc cc /usr/bin/gcc 30
