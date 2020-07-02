@@ -1,13 +1,10 @@
 #!/bin/sh -x
 #
 # (c) 2020, maxohm [ at ] gmail.com
+# (!) requires sudo
 #
-install="sudo `which apt-get` -fy install"
-alt="sudo update-alternatives"
-#
-#sudo apt list --installed | tr '/' '\n' |  grep qt
-#
-$install git
+install="`which apt-get` -fy install"
+alt="update-alternatives"
 #
 $install g++-6
 #
