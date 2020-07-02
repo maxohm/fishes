@@ -1,5 +1,6 @@
 #!/bin/sh -x
 #
-# (c) 2019, maxohm [ at ] gmail.com
+# (c) 2020, maxohm [ at ] gmail.com
+# (!) requires sudo
 #
-sudo rm -rf /var/cache/debconf/*;sudo dpkg-reconfigure debconf;sudo apt-get update;sudo apt-get upgrade
+rm -rf /var/cache/debconf/*;dpkg-reconfigure debconf;apt-get update;apt-get upgrade
