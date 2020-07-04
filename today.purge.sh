@@ -4,4 +4,4 @@
 # (!) requires sudo
 #
 date="`date -Idate`"
-echo date
+echo $date
