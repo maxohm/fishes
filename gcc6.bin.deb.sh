@@ -3,7 +3,7 @@
 # (c) 2020, maxohm [ at ] gmail.com
 # (!) requires sudo
 #
-install="`which apt-get` -fy install"
+install="`which apt-get` -f install"
 alt="update-alternatives"
 #
 $install g++-6

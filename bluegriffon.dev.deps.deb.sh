@@ -2,7 +2,7 @@
 #
 # (c) 2019, maxohm [ at ] gmail.com
 #
-install="sudo `which apt-get` -fy install"
+install="sudo `which apt-get` -f install"
 #
 $install git rustc cargo autoconf2.13 libgtk-3-dev libgconf2-dev libdbus-glib-1-dev libnspr4-dev libmemory-usage-perl
 #
