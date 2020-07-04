@@ -29,12 +29,13 @@ libmtp-dev \
 libpci-dev \
 libpng-dev \
 libpulse-dev \
-libsrtp-dev \
+libsrtp0-dev \
 libudev-dev \
 libusb-dev \
 libwebp-dev \
 libxml-dev \
-libxslt-dev \
+libxrandr-dev \
+libxslt1-dev \
 minizip \
 nspr \
 nss \
@@ -54,7 +55,6 @@ xdamage \
 xext \
 xfixes \
 xi \
-xrandr \
 xrender \
 xscrnsaver \
 xt \
