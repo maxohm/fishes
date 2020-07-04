@@ -1,4 +1,4 @@
-﻿#!/bin/sh -x
+#!/bin/sh -x
 #
 # (c) 2019, maxohm [ at ] gmail.com
 # (!) requires sudo
