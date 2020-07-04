@@ -2,7 +2,7 @@
 # (c) 2019, maxohm [ at ] gmail.com
 # (!) requires sudo
 #
-install="`which apt-get` -f install"
+install="`which apt-get` -fy install"
 #
 #$install g++ make qt5-qmake qtwebengine5-dev
 $install \

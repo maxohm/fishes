@@ -4,7 +4,7 @@
 # (!) requires sudo
 # (!!) do not uncomment lines! just copypaste to terminal!
 #
-install="`which apt-get` -f install"
+install="`which apt-get` -fy install"
 #
 apt list --installed | tr '/' '\n' |  grep qt
 #
