@@ -10,16 +10,17 @@ apt list --installed | tr '/' '\n' |  grep qt
 #
 $install git
 #
-#git clone git://code.qt.io/qt/qt5.git
+$install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev
+$install libssl-dev libxcursor-dev libxcomposite-dev libxdamage-dev libxrandr-dev libdbus-1-dev libfontconfig1-dev libcap-dev libxtst-dev libpulse-dev libudev-dev libpci-dev libnss3-dev libasound2-dev libxss-dev libegl1-mesa-dev gperf bison ninja-build
+#
+#git clone git://code.qt.io/qt/qt5.git ./qt5
+#cd ./qt5
 #./init-repository -f --module-subset=all
 #git checkout v5.11.0
 #git submodule foreach --recursive "git clean -dfx" && git clean -dfx
 #
-$install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev
-$install libssl-dev libxcursor-dev libxcomposite-dev libxdamage-dev libxrandr-dev libdbus-1-dev libfontconfig1-dev libcap-dev libxtst-dev libpulse-dev libudev-dev libpci-dev libnss3-dev libasound2-dev libxss-dev libegl1-mesa-dev gperf bison ninja-build
-#
 #mkdir -vp ./qt5.11_gcc6; cd ./qt5.11_gcc6
-#../qt5/configure --recheck-all -opensource -confirm-license -release -shared -make libs -make examples -optimized-qmake -no-qml-debug -no-directfb -no-kms -system-xcb -qt-zlib -qt-libjpeg -qt-libpng -qt-harfbuzz -qt-xkbcommon -qt-freetype -qt-pcre -no-icu -skip activeqt -skip androidextras -skip charts -skip datavis3d -skip enginio -skip gamepad -skip graphicaleffects -skip macextras -skip purchasing -skip quickcontrols2 -skip qtlocation -skip remoteobjects -skip virtualkeyboard -skip wayland -webengine-pepper-plugins -webengine-proprietary-codecs
+#../qt5/configure --recheck-all -opensource -confirm-license -release -shared -make libs -make examples -optimized-qmake -no-qml-debug -no-directfb -no-kms -system-xcb -qt-zlib -qt-libjpeg -qt-libpng -qt-harfbuzz -qt-xkbcommon -qt-freetype -qt-pcre -no-icu -skip activeqt -skip androidextras -skip charts -skip datavis3d -skip enginio -skip gamepad -skip graphicaleffects -skip macextras -skip purchasing -skip quickcontrols2 -skip remoteobjects -skip virtualkeyboard -skip wayland -webengine-pepper-plugins -webengine-proprietary-codecs
 #make -ks
 #
 $install qtchooser
