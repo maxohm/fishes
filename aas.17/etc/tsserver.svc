@@ -1,0 +1,35 @@
+#
+# Система Автоматического Администрирования AAS-17
+# (c) Автор и владелец -  maxohm [ at ] gmail.com
+# не допускается ни использование ни копирование без согласия автора.
+
+BCHKNTFS=bin\bchkntfs.cmd
+CHKDSK=bin\chkdsk.cmd
+DBBACKUR=bin\dbbackur.cmd
+DBBACKRR=bin\dbbackrr.cmd
+DFRAG2K3=bin\dfrag2k3.cmd
+ES7ZBCKP=bin\es7zbckp.cmd
+ES7ZBCM2=bin\es7zbcm2.cmd
+ES7ZLP=bin\es7zlp.cmd
+KILLALL=bin\pkillall.cmd
+NETXARCH=bin\netxarch.cmd
+NETXCONN=bin\netxconn.cmd
+OODEFRNM=bin\oodefrnm.cmd
+OODEFRSP=bin\oodefrsp.cmd
+OODEWIPE=bin\oodewipe.cmd
+PURGEDIR=bin\Purgedir.cmd
+PURGEFS=bin\Purgefs.cmd
+PURGEREG=bin\Purgereg.cmd
+SVCSTOP=bin\svcstop.cmd
+SVCSTART=bin\svcstart.cmd
+V7REPAIS=bin\v7repais.cmd
+V7RECALC=bin\v7recalc.cmd
+V7REPAIR=bin\v7repair.cmd
+V7UNLOAS=bin\v7unloas.cmd
+V7REGDB=bin\v7regdb.cmd
+V8REPAIS=bin\v8repais.cmd
+V8UNLOAS=bin\v8unloas.cmd
+V8UNLOAD=bin\v8unload.cmd
+V8LOAS=bin\v8loas.cmd
+REGSHELL=bin\regshell.cmd
+USERADD=bin\useradd.cmd
