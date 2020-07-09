@@ -5,5 +5,5 @@
 #
 # AAS-17 Automatic administartion system
 # (c) Author and owner -  maxohm [ at ] gmail.com
-# no copying or using before author permission allowed
+# author permission required for any sort of usage
 #
