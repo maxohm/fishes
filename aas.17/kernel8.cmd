@@ -1,5 +1,5 @@
 @rem ***************************************************
-@rem *** Copyright (c) 2017, maxohm [ at ] gmail.com ***
+@rem *** Copyright (c) 2020, maxohm [ at ] gmail.com ***
 @rem ***************************************************
 
 @echo off
@@ -36,6 +36,7 @@ for /f "eol=# tokens=1,2,3,4,5,6,7 delims=;" %%i in (%SCHEMA%) do (
 )
 @echo CLS >> %OUTFILE%
 @echo SCHTASKS /Query /FO CSV >> %OUTFILE%
+@echo SCHTASKS /CREATE /F /RU "" /SC ONSTART /TN "ONSTART" /TR %OUTFILE% /V1>> %OUTFILE%
 
 exit /b 0
 
