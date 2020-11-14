@@ -1,0 +1,14 @@
+#
+# Система Автоматического Администрирования AAS-20
+# (c) Автор и владелец -  maxohm [ at ] gmail.com
+# не допускается ни использование ни копирование без согласия автора
+#
+BCHKNTFS=bin\bchkntfs.cmd
+ES7ZBCM2=bin\es7zbcm2.cmd
+OODEFRNM=bin\oodefrnm.cmd
+OODEFRSP=bin\oodefrsp.cmd
+OODEWIPE=bin\oodewipe.cmd
+KILLALL=bin\pkillall.cmd
+PURGEDIR=bin\Purgedir.cmd
+SVCSTOP=bin\svcstop.cmd
+SVCSTART=bin\svcstart.cmd
