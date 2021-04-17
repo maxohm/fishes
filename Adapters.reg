@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+; %windir%\system32\regedt32.exe
+;
+; (c) 2021, maxohm [ at ] gmail.com
+;
+
+[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Adapters]
