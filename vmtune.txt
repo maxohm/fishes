@@ -1,0 +1,33 @@
+sched.mem.pshare.enable = "FALSE"
+mainMem.useNamedFile = "FALSE"
+logging = "FALSE"
+
+MemTrimRate = "0"
+MemAllowAutoScaleDown = "FALSE"
+prefvmx.useRecommendedLockedMemSize = "TRUE"
+prefvmx.minVmMemPct = "100"
+snapshot.disabled = "TRUE"
+
+isolation.tools.unity.disable = "TRUE"
+unity.allowCompositingInGuest = "FALSE"
+unity.enableLaunchMenu = "FALSE"
+
+pref.eula.2.appName = "VMware Workstation"
+pref.eula.2.buildNumber = "80004"
+pref.eula.0.appName = "VMware Player"
+pref.eula.0.buildNumber = "45731"
+
+mks.enableDX11Renderer = "FALSE"
+mks.enableGLRenderer = "TRUE"
+mks.enableD3DRenderer = "FALSE"
+mks.enableGLBasicRenderer = "FALSE"
+
+vmNpivWwnUpdateSupported = "FALSE"
+vmNpivWwnDisableSupported = "TRUE"
+vmNpivWwnSupported = "FALSE"
+npivWwnOnNonRdmVmSupported = "FALSE"
+npivTemporaryDisabled = "TRUE"
+diskUuidEnabled = "FALSE"
+useToe = "TRUE"
+
+

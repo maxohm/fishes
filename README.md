@@ -1,5 +1,6 @@
 #
-# (c) maxohm [ at ] gmail.com
-# В мастер-бранче ничего нет!
-# См.специализированные бранчи!
+# Copyright (c) 2021, maxohm [ at ] gmail.com
+# 
+# Pack Ice Machines branch
+# NO DUMMIES, PLEASE.
 #

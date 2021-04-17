@@ -1,0 +1,26 @@
+# Disk DescriptorFile
+version=1
+encoding="windows-1251"
+parentCID=ffffffff
+isNativeSnapshot="no"
+createType="twoGbMaxExtentFlat"
+
+# Extent description
+RW 4193792 FLAT "vm-f001.vmdk" 0
+RW 4193792 FLAT "vm-f002.vmdk" 0
+RW 4193792 FLAT "vm-f003.vmdk" 0
+RW 4193792 FLAT "vm-f004.vmdk" 0
+RW 4193792 FLAT "vm-f005.vmdk" 0
+RW 4193792 FLAT "vm-f006.vmdk" 0
+RW 3986432 FLAT "vm-f007.vmdk" 0
+
+# The Disk Data Base 
+#DDB
+
+ddb.adapterType = "lsilogic"
+ddb.geometry.cylinders = "1814"
+ddb.geometry.heads = "255"
+ddb.geometry.sectors = "63"
+ddb.toolsInstallType = "1"
+ddb.toolsVersion = "10278"
+ddb.virtualHWVersion = "10"
