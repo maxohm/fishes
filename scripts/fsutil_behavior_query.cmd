@@ -1,6 +1,7 @@
 @rem %windir%\system32\cmd.exe
 @rem
-@rem (c) 2019, maxohm [ at ] gmail.com
+@rem (c) maxohm [ at ] gmail.com
+@rem fsutil get fs info example
 @rem
 @%windir%\System32\fsutil behavior query allowExtChar
 @%windir%\System32\fsutil behavior query bugcheckOnCorrupt

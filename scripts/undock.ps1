@@ -2,16 +2,16 @@
 
 <#
 .SYNOPSIS
-    Fast docker remove
+    Fast Docker remove
 
 .DESCRIPTION
-    Removes docker an all it's components
+    Removes Docker an all it's components
 
 .NOTES
 	File Name      : undock.ps2
     Author: maxohm [at] gmail.com
 	Prerequisite   : PowerShell V2 over Vista and upper.
-	Copyright 2020 - Max Ohm
+	Copyright - Max Ohm
 #>
 
 <##>
