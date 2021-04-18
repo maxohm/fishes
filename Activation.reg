@@ -1,10 +1,9 @@
 Windows Registry Editor Version 5.00
 ; %windir%\system32\regedt32.exe
 ;
-; (c) 2019, maxohm [ at ] gmail.com
+; (c) maxohm [ at ] gmail.com
 ;
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\Activation]
 "ActivationInterval"=dword:35a4e900
 "Manual"=dword:00000001
 "NotificationDisabled"=dword:00000001
-

@@ -1,7 +1,7 @@
 Windows Registry Editor Version 5.00
 ; %windir%\system32\regedt32.exe
 ;
-; (c) 2019, maxohm [ at ] gmail.com
+; (c) maxohm [ at ] gmail.com
 ;
 [HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\AppCompat]
 "DisablePCA"=dword:00000001

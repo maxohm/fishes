@@ -1,4 +1,8 @@
 REGEDIT4
+; %windir%\system32\regedt32.exe
+;
+; (c) maxohm [ at ] gmail.com
+;
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa]
 "everyoneincludesanonymous"=dword:00000001
