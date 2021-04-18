@@ -23,5 +23,6 @@ else
 fi
 #
 $dzero of=/zerofile
-$dnull of=/zerofile;$sync;$sync;$pwroff
+$dnull of=/zerofile;
+$sync;$sync;$pwroff
 #
