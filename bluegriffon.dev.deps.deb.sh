@@ -4,7 +4,8 @@
 #
 install="sudo `which apt-get` -fy install"
 #
-$install git rustc cargo autoconf2.13 libgtk-3-dev libgconf2-dev libdbus-glib-1-dev libnspr4-dev libmemory-usage-perl
+$install git rustc cargo autoconf2.13 libgtk-3-dev libgconf2-dev libdbus-glib-1-dev libnspr4-dev zip libxt-dev
+#libmemory-usage-perl
 #
 #mkdir -vp bluegriffon
 #cd bluegriffon
