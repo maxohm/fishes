@@ -1,8 +1,9 @@
 #!/bin/sh -x
 #
-# (c) 2019, maxohm [ at ] gmail.com
+# (c) 2021, maxohm [ at ] gmail.com
+# (!) requires sudo
 #
-install="sudo `which apt-get` -fy install"
+install="`which apt-get` -fy install"
 #
 $install libsqlite3-dev libreadline-dev libncurses5-dev
 #

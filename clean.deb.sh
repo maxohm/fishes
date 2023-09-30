@@ -1,6 +1,7 @@
 #!/bin/sh -x
 #
-# (c) 2019, maxohm [ at ] gmail.com
+# (c) 2022, maxohm [ at ] gmail.com
+# (!) requires sudo
 #
 sw=`swapon | grep dev | tr ' ' '\n' | head -n1`
 #rsize="`df -ah / | tr 'G' '\n' | tail -n2 | head -n1 | tr -d ' ' | tr ',' '.'`G"

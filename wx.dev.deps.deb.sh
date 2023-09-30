@@ -1,8 +1,9 @@
 #!/bin/sh -x
 #
-# (c) 2019, maxohm [ at ] gmail.com
+# (c) 2021, maxohm [ at ] gmail.com
+# (!) requires sudo
 #
-install="sudo `which apt-get` -fy install"
+install="`which apt-get` -fy install"
 #
-$install make gcc libcppunit-dev libfuse-dev pkg-config yasm gtk2.0-dev intltool libgail-common
+$install make gcc g++ gtk2.0-dev yasm libfuse-dev libcppunit-dev pkg-config intltool libgail-common
 #

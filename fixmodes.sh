@@ -1,0 +1,7 @@
+#!/bin/sh -x
+#
+# (c) 2021, maxohm [ at ] gmail.com
+# (!) requires sudo
+#
+find . -type f -print0 | xargs -0 chmod 644
+find . -type d -print0 | xargs -0 chmod 755

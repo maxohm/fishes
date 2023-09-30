@@ -1,5 +1,6 @@
 #!/bin/sh -x
-# (c) 2019, maxohm [ at ] gmail.com
+#
+# (c) 2021, maxohm [ at ] gmail.com
 # (!) requires sudo
 #
 install="`which apt-get` -fy install"
