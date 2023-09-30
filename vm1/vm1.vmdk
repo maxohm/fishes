@@ -1,0 +1,30 @@
+# Disk DescriptorFile
+version=1
+parentCID=ffffffff
+isNativeSnapshot="no"
+createType="twoGbMaxExtentFlat"
+
+# Extent description
+RW 4192256 FLAT "vm1-f001.vmdk" 0
+RW 4192256 FLAT "vm1-f002.vmdk" 0
+RW 4192256 FLAT "vm1-f003.vmdk" 0
+RW 4192256 FLAT "vm1-f004.vmdk" 0
+RW 4192256 FLAT "vm1-f005.vmdk" 0
+RW 4192256 FLAT "vm1-f006.vmdk" 0
+RW 4192256 FLAT "vm1-f007.vmdk" 0
+RW 4192256 FLAT "vm1-f008.vmdk" 0
+RW 4192256 FLAT "vm1-f009.vmdk" 0
+RW 4192256 FLAT "vm1-f010.vmdk" 0
+RW 4192256 FLAT "vm1-f011.vmdk" 0
+RW 4007116 FLAT "vm1-f012.vmdk" 0
+
+# The Disk Data Base 
+#DDB
+
+ddb.adapterType = "lsilogic"
+ddb.geometry.cylinders = "3119"
+ddb.geometry.heads = "255"
+ddb.geometry.sectors = "63"
+ddb.toolsInstallType = "1"
+ddb.toolsVersion = "10278"
+ddb.virtualHWVersion = "10"

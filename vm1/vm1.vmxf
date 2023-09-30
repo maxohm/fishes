@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Foundry>
+<VM>
+<ClientMetaData>
+<clientMetaDataAttributes/>
+<HistoryEventList/></ClientMetaData>
+<vmxPathName type="string">vm1.vmx</vmxPathName></VM><tools-install-info><installError>0</installError><updateCounter>16</updateCounter></tools-install-info></Foundry>
