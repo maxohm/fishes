@@ -1,0 +1,3 @@
+systeminfo | findstr KB
+wmic qfe list
+wusa /uninstall /kb:4058702 /quiet /norestart

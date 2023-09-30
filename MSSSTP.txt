@@ -1,0 +1,5 @@
+Connecting parameters for MS-SSTP
+Hostname: You can obtain them in Public VPN Relay Servers List page.
+Username: vpn, Password: vpn
+Note: You must specify the hostname as "xxx.opengw.net" (DDNS hostname).
+If the port number of the SSTP server is not 443, you should append a suffix as ":port number"

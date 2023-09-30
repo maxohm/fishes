@@ -1,0 +1,43 @@
+SCHTASKS /Create /SC ONEVENT /mo "Event[System[(EventID=1074)]]" /EC Security /tn on_shutdown_normal /tr "c:\some.bat" 
+
+SCHTASKS /Create /SC ONEVENT /mo "Event[System[(EventID=6006)]]" /EC Security /tn on_shutdown_6006 /tr "c:\some.bat" 
+
+SCHTASKS /Create /SC ONEVENT /mo "Event[System[(EventID=6008)]]" /EC Security /tn on_shutdown_6008 /tr "c:\some.bat" 
+
+
+
+Log:System
+
+Source:User32
+
+Event ID:1074
+
+Log:  Microsoft-Windows-Winlogon/Operational
+
+Source:Winlogon
+
+Event ID:7002
+
+Log:  Microsoft-Windows-Eventlog-ForwardingPlugin/Operational
+
+Source:Eventlog-ForwardingPlugin
+
+Event ID:6005
+
+Log:  Microsoft-Windows-Eventlog-ForwardingPlugin/Operational
+
+Source:Eventlog-ForwardingPlugin
+
+Event ID:6006
+
+Log:Security
+
+Source:Microsoft Windows security auditing.
+
+Event ID:4634
+
+Log:Security
+
+Source:Microsoft Windows security auditing.
+
+Event ID:4647

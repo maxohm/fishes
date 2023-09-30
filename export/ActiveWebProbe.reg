@@ -1,0 +1,23 @@
+﻿Windows Registry Editor Version 5.00
+; %windir%\system32\regedt32.exe
+;
+; (c) maxohm [ at ] gmail.com
+;
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet]
+"ActiveWebProbePathV6"=""
+"ActiveWebProbePath"=""
+"ActiveDnsProbeHost"=""
+"EnableActiveProbing"=dword:00000000
+"PassivePollPeriod"=dword:ffffffff
+"ActiveWebProbeContentV6"=""
+"ActiveDnsProbeContentV6"=""
+"ActiveWebProbeContent"=""
+"ActiveDnsProbeContent"=""
+"ActiveWebProbeHost"=""
+"StaleThreshold"=dword:0000001e
+"ActiveWebProbeHostV6"=""
+"WebTimeout"=dword:ffffffff
+"ActiveDnsProbeHostV6"=""
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet\ManualProxies]
+

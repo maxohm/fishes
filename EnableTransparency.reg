@@ -1,0 +1,7 @@
+REGEDIT4
+; %windir%\system32\regedt32.exe
+;
+; (c) maxohm [ at ] gmail.com
+;
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"EnableTransparency"=dword:00000000

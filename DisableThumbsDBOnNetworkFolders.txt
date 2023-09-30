@@ -1,0 +1,7 @@
+reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableThumbsDBOnNetworkFolders /d 0x1 /t REG_DWORD /f
+
+
+Get-ChildItem -Path . -Include Thumbs.db -Recurse -Name -Force | Remove-Item –Force –WhatIF
+
+
+Get-ChildItem -Path . -Include Thumbs.db -Recurse -Name -Force | Remove-Item –Force
